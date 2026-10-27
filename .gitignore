@@ -1,0 +1,10 @@
+#Tells Git which files to ignore and not upload 
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.DS_Store
+.ipynb_checkpoints/
+Phishing_Email.csv
+#this excludes temporary Python files, virtual environments, local environment variables, and macOS metadata.

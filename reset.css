@@ -1,0 +1,23 @@
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make text consistent */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Make form elements use the same font */
+input, textarea, button {
+    font: inherit;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    display: block;
+}

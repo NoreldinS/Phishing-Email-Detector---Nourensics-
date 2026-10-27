@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nourensics | Email Security</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="Nourensics Email Security Logo.png"
+        alt="Nourensics Logo"
+        class="logo">
+    </header>
+
+    <main>
+       <h1>Email Threat Analyser</h1>
+        <p>See beyond the inbox. Detect suspicious emails and hidden threats.</p>
+
+       <section class="email-form">
+            <h2>Analyse an Email</h2>
+
+        <div class="input-group">
+            <label for="sender">Sender Email</label>
+            <input type="email" id="sender" placeholder="e.g. support@example.com">
+        </div>
+
+        <div class="input-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Enter the email subject">
+        </div>
+
+        <div class="input-group">
+            <label for="body">Email Content</label> 
+            <textarea id="body" placeholder="Paste the email content here..."></textarea>
+        </div>
+
+        <div class="hidden-url-group">
+            <label for="extraUrl">Hidden URL (Optional)</label>
+
+            <p class="url-warning">
+                ⚠️ Do not click suspicious links!
+                Right-click the link and select "Copy Link Address",
+                then paste it below.
+            </p>
+
+            <input
+                type="url"
+                id="extraUrl"
+                placeholder="Paste the copied link here..."
+            >
+        </div>
+
+            <button id="analyse-btn">Analyse Email</button>
+
+            <button id="clear-btn">Clear</button>
+            <p id="error-message"></p>  
+
+            <div class="results">
+
+                <h2>Analysis Results</h2>
+
+                <div class="risk-summary">
+
+                    <h3>Risk Level</h3>
+                    <p id="risk_level"></p>
+
+                    <h3>Risk Score</h3>
+                    <p id="risk_score"></p>
+                </div>
+
+                <div class="reasons">
+                    <h3>URL Warnings</h3>
+                    <p id="url_reasons"></p>
+
+                    <h3>Email Warnings</h3>
+                    <p id="email_reasons"></p>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

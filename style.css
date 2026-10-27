@@ -1,0 +1,367 @@
+#email_reasons {
+    white-space: pre-line;
+}
+
+#url_reasons {
+    white-space: pre-line;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Sets the font for the whole page */
+    background-color: #0f172a; /* Dark background */
+    color: #f8fafc; /* Makes the text white */
+    min-height: 100vh; /* Makes the background cover the full screen */
+}
+
+header {
+    background-color: #1e293b; /* Slightly lighter than the main background */
+    padding: 20px 40px; /* Adds space inside the header */
+    border-bottom: 1px solid #334155; /* Thin line under the header */
+}
+
+header h2 {
+    color: #38bdf8; /* Blue PhishGuard title */
+    font-size: 24px; /* Makes the title bigger */
+    font-weight: bold; /* Makes the title bold */
+}
+
+main {
+    max-width: 900px; /* Stops the content from getting too wide */
+    margin: 40px auto; /* Adds space at the top and centres everything */
+    padding: 20px; /* Adds some space around the content */
+}
+
+
+.input-group {
+    margin-bottom: 20px; /* Adds space between each input */
+}
+
+.input-group label {
+    display: block; /* Puts the label above the input */
+    margin-bottom: 8px; /* Adds a gap between the label and input */
+    font-weight: bold; /* Makes the label stand out */
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%; /* Makes the input fill its container */
+    padding: 12px; /* Adds space inside the input */
+    background-color: #1e293b; /* Dark input background */
+    color: white; /* Makes the typed text white */
+    border: 1px solid #475569; /* Adds a subtle border */
+    border-radius: 8px; /* Rounds the corners */
+    box-sizing: border-box; /* Keeps padding inside the width */
+}
+
+.input-group textarea {
+    min-height: 150px; /* Makes the email body box taller */
+    resize: vertical; /* Lets the user adjust its height */
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: 2px solid #38bdf8; /* Blue outline when typing */
+}
+
+
+#analyse-btn {
+    background-color: #38bdf8; /* Blue button */
+    color: #0f172a; /* Dark text */
+    padding: 12px 24px; /* Adds space inside the button */
+    border: none; /* Removes the default border */
+    border-radius: 8px; /* Rounds the corners */
+    font-size: 16px; /* Makes the text easier to read */
+    font-weight: bold; /* Makes the text stand out */
+    cursor: pointer; /* Shows the hand cursor when hovering */
+    width: 100%; /* Makes the button as wide as the input boxes */
+    transition: background-color 0.2s; /* Makes the colour change smoother */
+}
+
+#analyse-btn:hover {
+    background-color: #0ea5e9; /* Darker blue when hovering */
+}
+
+#analyse-btn:active {
+    background-color: #0284c7; /* Even darker when clicked */
+}
+
+.results {
+    background-color: #1e293b; /* Gives the results their own background */
+    padding: 25px; /* Adds space inside the box */
+    border-radius: 12px; /* Rounds the corners */
+    margin-top: 30px; /* Adds space above the results */
+    border: 1px solid #334155; /* Adds a subtle border */
+}
+
+.results h2 {
+    font-size: 22px; /* Makes the results heading bigger */
+    font-weight: bold; /* Makes the heading stand out */
+    margin-bottom: 20px; /* Adds space below the heading */
+}
+
+.risk-summary {
+    background-color: #0f172a; /* Makes the risk summary slightly darker */
+    padding: 20px; /* Adds space inside the summary */
+    border-radius: 8px; /* Rounds the corners */
+    margin-bottom: 20px; /* Separates it from the warnings */
+}
+
+.results h3 {
+    font-size: 16px; /* Sets the size of the smaller headings */
+    font-weight: bold; /* Makes the headings stand out */
+    margin-bottom: 8px; /* Adds space below each heading */
+}
+
+#risk_level,
+#risk_score {
+    font-size: 20px; /* Makes the risk results easier to see */
+    margin-bottom: 15px; /* Adds space between the results */
+}
+
+.reasons {
+    padding: 10px 0; /* Adds some vertical spacing */
+}
+
+#email_reasons,
+#url_reasons {
+    white-space: pre-line; /* Keeps the line breaks from JavaScript */
+    line-height: 1.8; /* Adds space between lines */
+    color: #cbd5e1; /* Makes the warnings a softer white */
+    margin-bottom: 20px; /* Separates the warning sections */
+    overflow-wrap: anywhere; /* Stops long URLs overflowing the box */
+}
+
+
+.low-risk {
+    color: #22c55e; /* Green for low risk */
+}
+
+.moderate-risk {
+    color: #f59e0b; /* Orange for moderate risk */
+}
+
+.high-risk {
+    color: #ef4444; /* Red for high risk */
+}
+
+.results {
+    display: none; /* Hides the results when the page first loads */
+}
+
+#analyse-btn:disabled {
+    opacity: 0.6; /* Makes the button look faded */
+    cursor: not-allowed; /* Shows that the button cannot be clicked */
+}
+
+
+@media (max-width: 600px) { /* Applies these styles on smaller screens */
+
+    header {
+        padding: 15px 20px; /* Reduces space around the header */
+    }
+
+    main {
+        margin: 20px auto; /* Less space above the content */
+        padding: 15px; /* Keeps content away from screen edges */
+    }
+
+    .results {
+        padding: 15px; /* Makes the results fit smaller screens */
+    }
+
+    h1 {
+        font-size: 26px; /* Makes the main heading fit better */
+    }
+}
+
+
+.email-form {
+    background-color: #1e293b; /* Gives the form its own dark background */
+    padding: 30px; /* Adds space inside the form */
+    border-radius: 12px; /* Rounds the corners */
+    border: 1px solid #334155; /* Adds a subtle border */
+    margin-top: 30px; /* Separates the form from the page heading */
+}
+
+.email-form > h2 {
+    font-size: 22px; /* Makes the form heading bigger */
+    font-weight: bold; /* Makes the heading stand out */
+    margin-bottom: 25px; /* Adds space before the first input */
+}
+
+
+.risk-summary {
+    border-left: 4px solid #38bdf8; /* Adds a blue line beside the risk summary */
+}
+
+.reasons {
+    display: flex; /* Lets us control the spacing between elements */
+    flex-direction: column; /* Keeps everything stacked vertically */
+    gap: 10px; /* Adds space between the headings and warnings */
+}
+
+.reasons h3 {
+    color: #38bdf8; /* Makes the warning headings blue */
+    margin-top: 10px; /* Adds some space above each heading */
+}
+
+#url_reasons,
+#email_reasons {
+    background-color: #0f172a; /* Gives the warnings a darker background */
+    padding: 15px; /* Adds space inside the warning boxes */
+    border-radius: 8px; /* Rounds the corners */
+    border-left: 3px solid #f59e0b; /* Adds an orange line beside the warnings */
+    margin-bottom: 10px; /* Adds space below each warning box */
+}
+
+#clear-btn {
+    background-color: transparent; /* Keeps the background transparent */
+    color: #cbd5e1; /* Light grey text */
+    border: 1px solid #475569; /* Adds a grey border */
+    padding: 12px 24px; /* Adds space inside the button */
+    border-radius: 8px; /* Rounds the corners */
+    font-size: 16px; /* Matches the Analyse button */
+    cursor: pointer; /* Shows the hand cursor */
+    width: 100%; /* Makes it the same width as Analyse */
+    margin-top: 10px; /* Adds space between the buttons */
+}
+
+#clear-btn:hover {
+    background-color: #334155; /* Slightly lighter when hovering */
+}
+
+#error-message {
+    color: #ef4444; /* Makes the error text red */
+    font-size: 14px; /* Keeps the message smaller than normal text */
+    margin-top: 12px; /* Adds space above the message */
+}
+
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #94a3b8; /* Makes the example text a softer grey */
+}
+
+main h1 {
+    font-size: 38px; /* Makes the main heading bigger */
+    font-weight: bold; /* Makes the text stand out */
+    color: #f8fafc; /* Gives it a clean white colour */
+    margin-bottom: 12px; /* Adds space below the heading */
+    letter-spacing: -1px; /* Brings the letters slightly closer */
+    text-align: center;
+}
+
+main > p {
+    font-size: 16px; /* Sets the description text size */
+    color: #94a3b8; /* Makes the description a softer grey */
+    line-height: 1.6; /* Adds some breathing room between lines */
+    text-align: center;
+}
+
+.hidden-url-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hidden-url-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #f1f5f9;
+}
+
+.url-warning {
+    background-color: #332819;
+    border-left: 4px solid #f59e0b;
+    color: #fcd34d;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.hidden-url-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    background-color: #1e293b;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+}
+
+.hidden-url-group input:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.logo {
+    width: 220px;
+    height: auto;
+    object-fit: contain;
+}
+
+body {
+    background:
+        radial-gradient(
+            ellipse at 95% 5%,
+            rgba(0, 153, 255, 0.09),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 0% 100%,
+            rgba(0, 153, 255, 0.07),
+            transparent 45%
+        ),
+        #0f172a;
+
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 650px;
+    height: 650px;
+    border: 1px solid rgba(56, 189, 248, 0.12);
+    border-radius: 50%;
+
+    top: -450px;
+    right: -350px;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 750px;
+    height: 750px;
+    border: 1px solid rgba(56, 189, 248, 0.10);
+    border-radius: 50%;
+
+    bottom: -550px;
+    left: -450px;
+
+    pointer-events: none;
+    z-index: 0;
+}
+#bayes_result {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 8px 0 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#bayes_result.phishing {
+    color: #ff4d4d;
+}
+
+#bayes_result.safe {
+    color: #00e676;
+}
