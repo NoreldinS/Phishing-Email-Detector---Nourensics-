@@ -30,7 +30,7 @@ button.addEventListener("click", async function() {
         return;
     }
    // fetch sends data inside its brakcets to api, await tells js to wait for the response before continuing, 
-    const response = await fetch("http://127.0.0.1:8000/analyse", {
+    const response = await fetch("https://phishing-email-detector-nourensics.onrender.com/analyse", {
         method: "POST", //POST method is used to send data to the API
         headers: {
             "Content-Type": "application/json" //Content-Type header is set to application/json to indicate that the request body contains JSON data
