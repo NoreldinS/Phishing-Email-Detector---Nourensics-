@@ -9,14 +9,14 @@ app = FastAPI() #puts FastAPI into variable called "app"
 # COR middleware configuration to allow requests from the website 
 app.add_middleware(
     CORSMiddleware,
-     allow_origins=[
+    allow_origins=[
         "http://127.0.0.1:5500",
-        "http://localhost:5500"
+        "http://localhost:5500",
         "https://cozy-blancmange-c30280.netlify.app"
     ],
     allow_credentials=False,
-    allow_methods=["POST"], 
-    allow_headers=["Content-Type"]
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 class EmailClass(BaseModel):
