@@ -12,13 +12,14 @@ app.add_middleware(
     allow_origins=[
         "http://127.0.0.1:5500",
         "http://localhost:5500",
-        "https://cozy-blancmange-c30280.netlify.app"
+        "https://cozy-blancmange-c30280.netlify.app",
         "https://nourensics-phishing-email-analyser.netlify.app"
     ],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 class EmailClass(BaseModel):
     sender: str #must contain a string
